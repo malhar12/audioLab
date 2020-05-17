@@ -17,6 +17,8 @@ export class AppComponent implements OnInit {
       audio: true,
       video: false
     }).then((stream) => {
+      // tslint:disable-next-line: no-string-literal
+      const AudioContext = window.AudioContext || window['webkitAudioContext'];
       const context = new AudioContext();
       const source = context.createMediaStreamSource(stream);
 

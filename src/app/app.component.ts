@@ -48,7 +48,7 @@ export class AppComponent implements OnInit {
 
       draw();
     }).catch((err) => {
-      alert('User did not give microphone access to the PWA');
+      alert(err);
     });
   }
 }
